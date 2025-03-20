@@ -5,6 +5,6 @@ To begin with, the data preparation was done (at data_preparation.ipynb) and the
 
 Two types of autoencoder architecture were implemented: Sparse autoencoders (SAE) and long short term memory (LSTM) autoencoders, which better take into account the sequential nature of the data.
 
-For the SAE impementation, we have examples of a straightforward implementation (Porto_SAE.ipynb), an implementation with moving windows (Porto_SAE_window.ipynb), an implementation which employed a low pass filter to the results of the encoder (Porto_SAE_LPF.ipynb), and a version which combines the moving window with the low pass filter (Porto_SAE_window_v2.ipynb).
+For the SAE impementation, we have examples of a straightforward implementation (Porto_SAE.ipynb), an implementation with moving windows (Porto_SAE_window.ipynb), an implementation which employed a low pass filter to the results of the encoder (Porto_SAE_LPF.ipynb), and a version which combines the moving window with the low pass filter (Porto_SAE_window_v2.ipynb). A third approach was developed, where, for the case when there's no anomalous data in the validation set, the threshold would be computed by Tukey Fences, the parameter $k$ the same as the cycle before.
 
 For the LSTM implementation, we have a straightforward implementation (Porto_LSTM.ipynb), as well as a moving windows application of LSTM (Porto_LSTM_window.ipynb -- although this implementation updates the autoencoder more than once per hour, which, over many months, makes for a really long computation time (3-4 days)).
